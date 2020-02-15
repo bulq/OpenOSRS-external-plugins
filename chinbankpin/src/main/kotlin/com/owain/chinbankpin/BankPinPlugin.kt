@@ -15,7 +15,6 @@ import java.awt.event.KeyEvent
 import java.awt.event.KeyEvent.*
 import javax.inject.Inject
 
-
 @Extension
 @PluginDescriptor(
         name = "Chin bank pin",
@@ -60,7 +59,7 @@ class BankPinPlugin : Plugin() {
             return
         }
 
-        val number: String = java.lang.String.valueOf(config.bankpin())
+        val number: String = config.bankpin().toString()
 
         val digits = number.toCharArray()
         var charCode = -1
